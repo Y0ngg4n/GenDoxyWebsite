@@ -22,7 +22,7 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $repo . '/';
 </head>
 <body>
 <?php
-echo "<h4><a href='projects.php?docPath=${realDocPath}&project=${project}'>${project}</a> > ${repo}</h4>"
+echo "<h4><a href='index.php'>Projects</a> > <a href='projects.php?docPath=${realDocPath}&project=${project}'>${project}</a> > ${repo}</h4>"
 ?>
 <ul class="list-group">
     <?php
