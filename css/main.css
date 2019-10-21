@@ -12,3 +12,17 @@ a{
     color: #6f8b4c !important;
     font-weight: bold;
 }
+.docNavElem a{
+    color: #d1d1d1;
+    text-shadow: none;
+}
+
+.docNavElem a {
+    color: #f1f1f1;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+iframe{
+    height: 96vh;
+    width: 100vw;
+}

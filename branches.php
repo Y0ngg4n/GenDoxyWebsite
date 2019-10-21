@@ -1,10 +1,12 @@
 <?php
+if(isset($_GET['project'])) $project = $_GET['project'];
 if(isset($_GET['repo'])) $repo = $_GET['repo'];
 if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $repo . '/';
 ?>
 <!doctype html>
 <html lang="de">
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -24,7 +26,7 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $repo . '/';
     $dirs = array_filter(glob($docPath . '*'), 'is_dir');
     foreach ($dirs as $dir) {
         $name = str_replace($docPath, "", $dir);
-        echo "<li class='list-group-item'><a href='${docPath}/${name}/html/index.html'>${name}</a></li>";
+        echo "<li class='list-group-item'><a href='doc.php?docPath=${docPath}&name=${name}&project=${project}&repo=${repo}'>${name}</a></li>";
     }
     ?>
 </ul>

@@ -5,6 +5,7 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $project . '/';
 <!doctype html>
 <html lang="de">
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -24,7 +25,7 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $project . '/';
     $dirs = array_filter(glob($docPath . '*'), 'is_dir');
     foreach ($dirs as $dir) {
         $name = str_replace($docPath, "", $dir);
-        echo "<li class='list-group-item'><a href='branches.php?repo=${name}&docPath=${docPath}'>${name}</a></li>";
+        echo "<li class='list-group-item'><a href='branches.php?repo=${name}&docPath=${docPath}&project=$project'>${name}</a></li>";
     }
     ?>
 </ul>
