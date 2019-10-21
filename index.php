@@ -2,7 +2,7 @@
 //##########################################
 //# Change this to your Documentation path #
 //##########################################
-$docPath = "git/";
+$docPath = "docs/";
 ?>
 <!doctype html>
 <html lang="de">
@@ -14,6 +14,7 @@ $docPath = "git/";
     <title>Abas Docs</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" crossorigin="anonymous">
     <script src="js/jquery.min.js" crossorigin="anonymous"></script>
     <script src="js/popper.min.js" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
@@ -25,7 +26,7 @@ $docPath = "git/";
 $dirs = array_filter(glob($docPath . '*'), 'is_dir');
 foreach ($dirs as $dir) {
     $name = str_replace($docPath, "", $dir);
-    echo "<li class='list-group-item'><a href='projects.php?project={$name}&docPath={$docPath}'>{$name}</a></li>";
+    echo "<li class='list-group-item'><a href='projects.php?project=${name}&docPath=${docPath}'>${name}</a></li>";
 }
 ?>
 </ul>

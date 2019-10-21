@@ -1,0 +1,14 @@
+body
+{
+    background-color: #333333;
+    /** for docs **/
+    color: #a1a1a1;
+}
+li{
+    background-color: #282828 !important;
+    color: #a1a1a1 !important;
+}
+a{
+    color: #6f8b4c !important;
+    font-weight: bold;
+}

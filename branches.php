@@ -12,6 +12,7 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $repo . '/';
     <title>Abas Docs</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" crossorigin="anonymous">
     <script src="js/jquery.min.js" crossorigin="anonymous"></script>
     <script src="js/popper.min.js" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
@@ -23,7 +24,7 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $repo . '/';
     $dirs = array_filter(glob($docPath . '*'), 'is_dir');
     foreach ($dirs as $dir) {
         $name = str_replace($docPath, "", $dir);
-        echo "<li class='list-group-item'><a href='${docPath}/html/index.html'>{$name}</a></li>";
+        echo "<li class='list-group-item'><a href='${docPath}/${name}/html/index.html'>${name}</a></li>";
     }
     ?>
 </ul>
