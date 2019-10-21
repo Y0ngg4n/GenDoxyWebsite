@@ -24,7 +24,7 @@ if (isset($_GET['docPath'])) $docPath = $_GET['docPath'];
 </head>
 <body>
 <?php
-echo "<h4><a class='docNavElem' href='index.php'>Projekte</a> > ";
+echo "<h4><a class='docNavElem' href='index.php'>Projects</a> > ";
 echo "<a class='docNavElem' href='projects.php?docPath=${realDocPath}&project=${project}'>${project}</a> > ";
 echo "<a class='docNavElem' href='branches.php?docPath=${realDocPath}/${project}&repo=${repo}&project=${project}'>${repo}</a></h4>";
 echo "<iframe frameBorder='0' src='${docPath}/${name}/html/index.html'></iframe>";
