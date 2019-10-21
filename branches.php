@@ -1,4 +1,5 @@
 <?php
+include "realDocPath.php";
 if(isset($_GET['project'])) $project = $_GET['project'];
 if(isset($_GET['repo'])) $repo = $_GET['repo'];
 if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $repo . '/';
@@ -20,7 +21,9 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $repo . '/';
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Branches</h1>
+<?php
+echo "<h4><a href='projects.php?docPath=${realDocPath}&project=${project}'>${project}</a> > ${repo}</h4>"
+?>
 <ul class="list-group">
     <?php
     $dirs = array_filter(glob($docPath . '*'), 'is_dir');

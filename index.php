@@ -21,7 +21,7 @@ $docPath = "docs/";
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Projects</h1>
+<h4>Projects</h4>
 <ul class="list-group">
 <?php
 $dirs = array_filter(glob($docPath . '*'), 'is_dir');

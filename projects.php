@@ -19,7 +19,9 @@ if(isset($_GET['docPath'])) $docPath = $_GET['docPath'] . '/' . $project . '/';
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Repositories</h1>
+<?php
+echo "<h4><a href='index.php'>Projects</a> > ${project}</h4>"
+?>
 <ul class="list-group">
     <?php
     $dirs = array_filter(glob($docPath . '*'), 'is_dir');
